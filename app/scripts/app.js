@@ -1,5 +1,8 @@
 App = Ember.Application.create();
 
+//models
+require('scripts/models/university_model');
+
 
 require('scripts/routes/*');
 require('scripts/controllers/*');

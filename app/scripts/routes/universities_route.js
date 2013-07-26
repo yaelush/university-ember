@@ -1,7 +1,6 @@
 
-
 App.UniversitiesRoute = Ember.Route.extend({
-  model: function () {
-    return App.Post.find();
-  }
+	model: function(param){
+		return App.University.find({limit: 20, order_by: 'title'});
+	}
 });

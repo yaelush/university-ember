@@ -1,20 +1,30 @@
 
 App.Store = DS.Store.extend({
-	revision:12,
-	adapter: 'DS.FixtureAdapter'
+	
+	/**
+	 * our adapter
+	 */
+	adapter: Nerdeez.DjangoTastypieAdapter.extend({
+	    /**
+	     * adapter hook to set the server url
+	     */
+	    serverDomain : SERVER_URL,
+	    
+	    /**
+	     * hook if we want to use cross domain communication
+	     */
+	    wormhole: Nerdeez.Wormhole,
+	    
+	    serializer: Nerdeez.DjangoTastypieSerializer.extend({
+            
+            /**
+             * constructor for the serializer, set the mapping for the relations 
+             */
+            init: function(){
+                this._super();
+                this.mappings.set( 'Nerdeez.Course', { university: { embedded: 'load' } } );
+            }
+	    })
+	})
+	
 });
-
-App.Post =DS.Model.extend({
-	title: DS.attr('string'),
-	author: DS.attr('string')
-});
-
-App.Post.FIXTURES=[{
-	id:1,
-	title:"Rail",
-	author:"Bob"
-},{
-	id:2,
-	title:"Parley",
-	author:"Jef"
-}];
