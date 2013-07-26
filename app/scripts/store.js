@@ -14,7 +14,7 @@ App.Store = DS.Store.extend({
 	     * hook if we want to use cross domain communication
 	     */
 	    wormhole: Nerdeez.Wormhole,
-	    
+
 	    serializer: Nerdeez.DjangoTastypieSerializer.extend({
             
             /**
@@ -22,7 +22,7 @@ App.Store = DS.Store.extend({
              */
             init: function(){
                 this._super();
-                this.mappings.set( 'Nerdeez.Course', { university: { embedded: 'load' } } );
+                this.mappings.set( 'App.University', { university: { embedded: 'load' } } );
             }
 	    })
 	})
