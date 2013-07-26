@@ -1,0 +1,23 @@
+
+<div>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+         <a class='brand' href='#'>Blogger</a>
+        <ul class='nav'>
+          <li>{{#linkTo 'universities'}}Universities{{/linkTo}}</li>
+          <li>{{#linkTo 'about'}}About{{/linkTo}}</a></li>
+        <ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid" id="main">
+    <div class="row-fluid">
+      <div>
+        <div class="span12">
+          {{outlet}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

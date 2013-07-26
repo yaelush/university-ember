@@ -1,0 +1,19 @@
+
+<div class='row'>
+<div class='span3'>
+<table class='table'>
+            <thead>
+            <tr><th>Recent Posts</th></tr>
+            </thead>
+            {{#each controller}}
+            <tr><td>
+              {{#linkTo 'results' this}}{{title}} by {{author}}{{/linkTo}}
+            </td></tr>
+            {{/each}}
+          </table>
+</div>
+<div class='span9'>
+	<h1>Universities</h1>
+	{{outlet}}
+</div>
+</div>
