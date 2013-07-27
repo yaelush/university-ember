@@ -1,0 +1,12 @@
+
+
+<div class='row' id='content'>
+<div class='span3 offset4'>
+    <form {{action save on="submit"}}>
+    {{view Ember.TextField valueBinding="title" placeholder="Title" required="true"}}
+    <br />
+    {{view Ember.TextArea valueBinding="description" placeholder="Description" required="true"}}<br />
+      <button type="submit">Save</button>
+    </form>
+</div>
+</div>

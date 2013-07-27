@@ -13,5 +13,4 @@ App.SearchController = Ember.ArrayController.extend({
 
 App.UniversitiesController = App.SearchController.extend({
 	_model: App.University
-	
 });

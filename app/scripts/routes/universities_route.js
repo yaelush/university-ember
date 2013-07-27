@@ -4,3 +4,5 @@ App.UniversitiesRoute = Ember.Route.extend({
 		return App.University.find({limit: 20, order_by: 'title'});
 	}
 });
+
+

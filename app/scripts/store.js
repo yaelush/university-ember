@@ -4,6 +4,7 @@ App.Store = DS.Store.extend({
 	adapter: Nerdeez.DjangoTastypieAdapter.extend({
 	    serverDomain : SERVER_URL,
 	    wormhole: Nerdeez.Wormhole,
+	    
 	    serializer: Nerdeez.DjangoTastypieSerializer.extend({
         	init: function(){
                 this._super();
